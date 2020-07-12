@@ -44,3 +44,14 @@ class Solution {
         return nums.length+1;
     }
 }
+
+/**
+Key Insights
+
+Intiution:
+-> Replace all values, nums[i]<= 0 && nums[i] > nums.length with 1. 
+-> Make it such that all the values inside the array are in the range 1 to nums.length. 
+-> Then treat those values as indices and make the actual values at those indices negative. 
+-> The first positive value at any index i is the missing positive value.
+
+*/
