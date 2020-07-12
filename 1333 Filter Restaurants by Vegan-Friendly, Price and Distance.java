@@ -34,7 +34,8 @@ Example:
         if (a[rating] == b[rating]) { 
             return b[id] - a[id]; 
         } else 
-            return b[rating] - a[rating]; });
+            return b[rating] - a[rating]; 
+    });
 
 b - a -> decreasing order sort
 a - b -> increasing order sort
