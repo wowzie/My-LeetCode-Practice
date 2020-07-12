@@ -33,3 +33,25 @@ class Solution {
         return up + down + left + right;
     }
 }
+
+---- Key Insights ---- 
+
+Use DFS to find area. Simple DFS. 
+Tricky calculating area, check notes below: 
+
+public int dfs(int[][] grid, int row, int col, int count, boolean[][] visited) { 
+    if (//conditions to return false) { 
+        return 0; 
+    } 
+    
+    visited[row][col] = true; 
+    
+    int up = dfs(grid, row-1, col, count, visited); 
+    int down = dfs(grid, row+1, col, count, visited); 
+    int left = dfs(grid, row, col-1, count, visited); 
+    int right = dfs(grid, row, col+1, count, visited); 
+    
+    if (grid[row][col] == 1) { 
+        return 1 + up + down + left + right; 
+    } 
+    return up + down + left + right; }
