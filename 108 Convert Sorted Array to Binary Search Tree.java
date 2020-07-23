@@ -15,7 +15,7 @@
  */
 class Solution {
     public TreeNode sortedArrayToBST(int[] nums) {
-        return createBST(nums, 0, nums.length);
+        return createBST(nums, 0, nums.length-1);
     }
     
     public TreeNode createBST(int[] nums, int left, int right) {
