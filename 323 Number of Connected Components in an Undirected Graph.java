@@ -4,8 +4,8 @@ class Solution {
         int count = 0;
 
         for (int i = 0; i < n; i++) {
-            if (!visited.contains(n)) {
-                dfs(edges, edges[i][0], visited);
+            if (!visited.contains(i)) {
+                dfs(edges, i, visited);
                 count++;
             }
         }
@@ -19,6 +19,8 @@ class Solution {
         for (int i = 0; i < graph.length; i++) {
             if (graph[i][0] == start && !visited.contains(graph[i][1])) {
                 dfs(graph, graph[i][1], visited);
+            } else if(graph[i][1] == start && !visited.contains(graph[i][0])) {
+                dfs(graph, graph[i][0], visited);
             }
         }
     }
